@@ -1,0 +1,11 @@
+#!/bin/sh
+# Pre commit hook
+
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+# Bundles JS sources
+echo "${RED}npm run build ${NC}"
+npm run build
+git add -A .
